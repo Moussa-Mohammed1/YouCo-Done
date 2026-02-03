@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->string('nom');
             $table->string('localisation');
-            $table->foreignId('typeCuisine_id')->constrained('type_cuisine');
+            $table->foreignId('typeCuisine_id')->constrained('types_cuisine');
             $table->integer('capacite');
             $table->timestamps();
         });
