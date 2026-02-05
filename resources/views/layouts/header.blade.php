@@ -23,7 +23,7 @@
                         class="flex items-center justify-center rounded-lg h-10 px-5 bg-transparent border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-[#111813] dark:text-white text-sm font-bold transition-all">
                         Se connecter
                     </a>
-                    <a href="{{ route('login') }}"
+                    <a href="{{ route('register') }}"
                         class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-[#25d660] text-[#111813] text-sm font-bold shadow-sm hover:shadow transition-all">
                         S'inscrire
                     </a>
