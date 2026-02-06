@@ -217,7 +217,7 @@
                                     assigner</label>
                                 <select name="role"
                                     class="w-full px-4 py-2.5 rounded-lg border border-[#cfe7e1] dark:border-[#2a3f3a] bg-gray-50 dark:bg-[#122420] focus:ring-primary focus:border-primary">
-                                    <option value="client">Client</option>
+                                    <option value="user">Client</option>
                                     <option value="restaurant_owner">Restaurateur</option>
                                     <option value="admin">Admin</option>
                                 </select>
