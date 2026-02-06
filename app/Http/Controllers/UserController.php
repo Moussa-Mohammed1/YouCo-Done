@@ -43,7 +43,7 @@ class UserController extends Controller
     {
         $request->validate([
             'email' => 'required|email',
-            'role' => 'required|in:client,restaurant_owner,admin'
+            'role' => 'required|in:user,restaurant_owner,admin'
         ]);
 
         $user = User::where('email', $request->email)->first();
