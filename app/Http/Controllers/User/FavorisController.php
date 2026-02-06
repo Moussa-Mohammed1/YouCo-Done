@@ -4,11 +4,22 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Favoris;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Symfony\Component\Console\Input\Input;
 
 class FavorisController extends Controller
 {
+
+    public function index()
+    {
+        $restaurants = auth()->user()
+            ->favoriteRestaurants()
+            ->with(['typeCuisine', 'photos', 'horaires'])
+            ->get();
+            
+        return view('user.favoris', compact('restaurants'));
+    }
     public function destroy(Request $request)
     {
         $user_id = $request->input('user_id');
