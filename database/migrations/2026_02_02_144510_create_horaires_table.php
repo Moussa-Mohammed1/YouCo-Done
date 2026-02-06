@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('horaires', function (Blueprint $table) {
             $table->id();
             $table->string('jourSemaine');
-            $table->dateTime('heureOuverture');
-            $table->dateTime('heureFermeture');
+            $table->time('heureOuverture');
+            $table->time('heureFermeture');
             $table->foreignId('restaurant_id')->constrained('restaurants')->cascadeOnDelete();
             $table->timestamps();
         });
