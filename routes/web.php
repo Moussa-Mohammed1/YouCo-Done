@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\UserController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -35,3 +37,4 @@ Route::get('/permissions', [PermissionController::class, 'index'])
 Route::post('/admin/assign-role', [UserController::class, 'assignRole'])
         ->middleware('auth', 'role:admin')
         ->name('admin.assign-role');
+Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('user.home');
