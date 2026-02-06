@@ -29,10 +29,11 @@
                 </a>
             </nav>
             <div class="p-4 border-t border-white/10">
-                <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-red-400 hover:bg-red-500/10 transition-colors"
-                    href="">
+                <form action="{{ route('logout') }}" method="POST" class="flex items-center gap-3 px-3 py-3 rounded-lg text-red-400 hover:bg-red-500/10 transition-colors">
+                    @csrf
+
                     <span class="material-symbols-outlined">logout</span>
-                    <span class="font-medium text-sm">Déconnexion</span>
-                </a>
+                    <button type="submit" class="font-medium text-sm">Déconnexion</button>
+                </form>
             </div>
         </aside>
