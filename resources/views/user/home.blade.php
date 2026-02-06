@@ -234,8 +234,8 @@
                                         class="mt-auto pt-4 flex items-center justify-between border-t border-slate-100 dark:border-slate-800">
                                         <span
                                             class="text-sm font-bold text-slate-700 dark:text-slate-300">{{ str_repeat('$', min($restaurant->gamme_prix ?? 2, 3)) }}</span>
-                                        <button
-                                            class="px-5 py-2 bg-primary text-sidebar-dark font-black text-xs rounded-lg hover:brightness-110 transition-all">Réserver</button>
+                                        <a href="{{ route('show.restaurant', $restaurant->id) }}"
+                                            class="px-5 py-2 bg-primary text-sidebar-dark font-black text-xs rounded-lg hover:brightness-110 transition-all">Réserver</a>
                                     </div>
                                 </div>
                             </div>
